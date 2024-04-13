@@ -1,10 +1,8 @@
 import { ElInput } from "element-plus";
-import { JSX } from "vue/jsx-runtime";
-import { CustomCol } from "./Model";
+import { CustomCols } from "./Model";
 
-export const customCol2: CustomCol = {
-    prop: 'col2',
-    input: (scope) => (
+export const customCol2: CustomCols = {
+    'col2': (scope) => (
         <>
             <ElInput style={{width:'100px'}} v-model={scope.row.col2}>
 
@@ -13,5 +11,7 @@ export const customCol2: CustomCol = {
 
             </ElInput>
         </>
-    )
+    ),
+    'col1':(scope) =>(<ElInput v-model={scope.row.col1}></ElInput>)
 } 
+
