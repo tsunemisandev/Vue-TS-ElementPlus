@@ -1,13 +1,14 @@
 <template>
   <div>
-    <CTable 
+    <InputNumber></InputNumber>
+    <!-- <CTable 
       :column-defs="columns" 
       :data="data"  
       :custom-cols="test" 
       style="width: 500px;"
       >
-    </CTable>
-  </div>
+    </CTable> -->
+  </div> 
 </template>
 
 <script setup lang="ts">
@@ -15,6 +16,7 @@
 import { CTable } from './components/CTable';
 import { ColumnDefs } from './components/Model';
 import { customCol2} from './components/Parts';
+import InputNumber from './components/InputNumber/InputNumber.vue'
 
 const test = customCol2
 const columns: ColumnDefs[] = [

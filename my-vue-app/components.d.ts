@@ -13,6 +13,8 @@ declare module 'vue' {
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    InputNumber: typeof import('./src/components/InputNumber/InputNumber.vue')['default']
+    InputText: typeof import('./src/components/InputText/InputText.vue')['default']
     Wrapper: typeof import('./src/components/Wrapper.vue')['default']
   }
 }
