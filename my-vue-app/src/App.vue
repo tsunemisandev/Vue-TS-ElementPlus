@@ -5,7 +5,7 @@
     <el-input
       v-model="test"
       style="width: 150px"
-      :disabled="isDisabled()"
+      :disabled="computedDisable['test']"
     ></el-input>
     <el-button>Test</el-button>
   </div>
@@ -43,6 +43,15 @@ watch(test2, () => {
   } else {
     disabled.value["test"] = false;
   }
+});
+
+const computedDisable = computed<{ [key: string]: boolean }>(() => {
+  if (test2.value === "123") {
+    disabled.value["test"] = true;
+  } else {
+    disabled.value["test"] = false;
+  }
+  return disabled.value;
 });
 
 // const mock = new MockAdapter(axios)
