@@ -19,3 +19,9 @@ test(`バリデーションチェック`, async ({ page }) => {
     const validationMessage = await page.locator('body')
     await expect(validationMessage).toContainText('Please input your name')
 })
+
+test(`グリッド`,async ({page})=>{
+    await page.goto("/grid")
+    await page.locator("#d02").getByRole('button', { name: 'Detail' }).nth(1).click();
+    
+})
